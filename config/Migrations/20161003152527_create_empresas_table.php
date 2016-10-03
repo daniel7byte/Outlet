@@ -44,7 +44,7 @@ class CreateEmpresasTable extends AbstractMigration
 
       $keyCategoria = $this->table('empresas');
       $keyCategoria->addColumn('categoria_id', 'integer', array('signed' => 'disable'))
-                   ->addForeignKey('categoria_id', 'categorias', 'id', array('delete' => 'SET_NULL', 'update' => 'NO_ACTION'))
+                   ->addForeignKey('categoria_id', 'categorias', 'id', array('delete' => 'NO_ACTION', 'update' => 'NO_ACTION'))
                    ->update();
     }
 }

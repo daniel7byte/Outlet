@@ -2,7 +2,7 @@
 
 use Phinx\Migration\AbstractMigration;
 
-class CreateTokensTable extends AbstractMigration
+class CreateBolsaTable extends AbstractMigration
 {
     /**
      * Change Method.
@@ -27,19 +27,21 @@ class CreateTokensTable extends AbstractMigration
      */
     public function change()
     {
-      $table = $this->table('tokens');
-      $table->addColumn('titulo', 'string', array('limit' => 100))
-            ->addColumn('codigo', 'string')
-            ->addColumn('descripcion', 'text')
-            ->addColumn('caducidad', 'datetime')
-            ->addColumn('activo', 'boolean', array('default' => 0))
-            ->addColumn('created', 'datetime')
-            ->addColumn('modified', 'datetime')
+      $table = $this->table('bolsa');
+      $table->addColumn('cupon_id', 'integer', array('signed' => 'disable'))
+            ->addColumn('usuario_id', 'integer', array('signed' => 'disable'))
             ->create();
 
-      $keyUsuario = $this->table('tokens');
-      $keyUsuario->addColumn('usuario_id', 'integer', array('signed' => 'disable'))
-                 ->addForeignKey('usuario_id', 'usuarios', 'id', array('delete' => 'NO_ACTION', 'update' => 'NO_ACTION'))
+      $keyUsuario = $this->table('bolsa');
+      $keyUsuario->addForeignKey('usuario_id', 'usuarios', 'id', array('delete' => 'NO_ACTION', 'update' => 'NO_ACTION'))
                  ->update();
+
+      $keyCupon = $this->table('bolsa');
+      $keyCupon->addForeignKey('cupon_id', 'cupones', 'id', array('delete' => 'CASCADE', 'update' => 'NO_ACTION'))
+               ->update();
+    }
+
+    public function up()
+    {
     }
 }

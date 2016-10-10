@@ -31,6 +31,7 @@ class CreateEmpresasTable extends AbstractMigration
       $table->addColumn('nit', 'string', array('limit' => 100))
             ->addColumn('razonSocial', 'string', array('limit' => 100))
             ->addColumn('razonComercial', 'string', array('limit' => 100))
+            ->addColumn('ciudad', 'string', array('limit' => 100))
             ->addColumn('descripcion', 'text')
             ->addColumn('created', 'datetime')
             ->addColumn('modified', 'datetime')

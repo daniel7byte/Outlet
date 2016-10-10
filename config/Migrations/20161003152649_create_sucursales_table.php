@@ -31,6 +31,7 @@ class CreateSucursalesTable extends AbstractMigration
       $table->addColumn('titulo', 'string', array('limit' => 100))
             ->addColumn('direccion', 'string', array('limit' => 100))
             ->addColumn('descripcion', 'text')
+            ->addColumn('ciudad', 'string', array('limit' => 100))
             ->addColumn('lat', 'string')
             ->addColumn('lng', 'string')
             ->addColumn('created', 'datetime')

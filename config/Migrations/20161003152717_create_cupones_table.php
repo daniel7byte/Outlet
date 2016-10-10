@@ -31,22 +31,18 @@ class CreateCuponesTable extends AbstractMigration
       $table->addColumn('titulo', 'string', array('limit' => 100))
             ->addColumn('banner', 'text')
             ->addColumn('descripcion', 'text')
-
+            ->addColumn('ciudad', 'string', array('limit' => 100))
             ->addColumn('img1', 'text')
             ->addColumn('img2', 'text')
             ->addColumn('img3', 'text')
             ->addColumn('img4', 'text')
             ->addColumn('img5', 'text')
-
             ->addColumn('valor', 'string', array('limit' => 100))
             ->addColumn('descuento', 'string', array('limit' => 100))
-
             ->addColumn('fechaInicio', 'date')
             ->addColumn('horaInicio', 'time')
-
             ->addColumn('fechaTerminacion', 'date')
             ->addColumn('horaTerminacion', 'time')
-
             ->addColumn('created', 'datetime')
             ->addColumn('modified', 'datetime')
             ->create();

@@ -44,8 +44,8 @@ class CategoriasFixture extends TestFixture
             'titulo' => 'Lorem ipsum dolor sit amet',
             'icon' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
             'descripcion' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-            'created' => '2016-10-15 04:38:21',
-            'modified' => '2016-10-15 04:38:21'
+            'created' => '2016-10-15 05:02:05',
+            'modified' => '2016-10-15 05:02:05'
         ],
     ];
 }

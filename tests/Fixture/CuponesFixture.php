@@ -36,15 +36,12 @@ class CuponesFixture extends TestFixture
         'created' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
         'modified' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
         'sucursal_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-        'categoria_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         '_indexes' => [
             'sucursal_id' => ['type' => 'index', 'columns' => ['sucursal_id'], 'length' => []],
-            'categoria_id' => ['type' => 'index', 'columns' => ['categoria_id'], 'length' => []],
         ],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             'cupones_ibfk_1' => ['type' => 'foreign', 'columns' => ['sucursal_id'], 'references' => ['sucursales', 'id'], 'update' => 'noAction', 'delete' => 'cascade', 'length' => []],
-            'cupones_ibfk_2' => ['type' => 'foreign', 'columns' => ['categoria_id'], 'references' => ['categorias', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
         ],
         '_options' => [
             'engine' => 'InnoDB',
@@ -73,13 +70,12 @@ class CuponesFixture extends TestFixture
             'valor' => 'Lorem ipsum dolor sit amet',
             'descuento' => 'Lorem ipsum dolor sit amet',
             'fechaInicio' => '2016-10-15',
-            'horaInicio' => '04:39:13',
+            'horaInicio' => '05:02:14',
             'fechaTerminacion' => '2016-10-15',
-            'horaTerminacion' => '04:39:13',
-            'created' => '2016-10-15 04:39:13',
-            'modified' => '2016-10-15 04:39:13',
-            'sucursal_id' => 1,
-            'categoria_id' => 1
+            'horaTerminacion' => '05:02:14',
+            'created' => '2016-10-15 05:02:14',
+            'modified' => '2016-10-15 05:02:14',
+            'sucursal_id' => 1
         ],
     ];
 }

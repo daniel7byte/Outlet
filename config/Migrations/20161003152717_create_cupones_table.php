@@ -52,9 +52,9 @@ class CreateCuponesTable extends AbstractMigration
                   ->addForeignKey('sucursal_id', 'sucursales', 'id', array('delete' => 'CASCADE', 'update' => 'NO_ACTION'))
                   ->update();
 
-      $keyCategoria = $this->table('cupones');
-      $keyCategoria->addColumn('categoria_id', 'integer', array('signed' => 'disable'))
-                   ->addForeignKey('categoria_id', 'categorias', 'id', array('delete' => 'NO_ACTION', 'update' => 'NO_ACTION'))
-                   ->update();
+      // $keyCategoria = $this->table('cupones');
+      // $keyCategoria->addColumn('categoria_id', 'integer', array('signed' => 'disable'))
+      //              ->addForeignKey('categoria_id', 'categorias', 'id', array('delete' => 'NO_ACTION', 'update' => 'NO_ACTION'))
+      //              ->update();
     }
 }

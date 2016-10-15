@@ -7,8 +7,6 @@
         <li><?= $this->Html->link(__('New Cupone'), ['action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Sucursales'), ['controller' => 'Sucursales', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Sucursale'), ['controller' => 'Sucursales', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Categorias'), ['controller' => 'Categorias', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Categoria'), ['controller' => 'Categorias', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="cupones view large-9 medium-8 columns content">
@@ -33,10 +31,6 @@
         <tr>
             <th scope="row"><?= __('Sucursale') ?></th>
             <td><?= $cupone->has('sucursale') ? $this->Html->link($cupone->sucursale->id, ['controller' => 'Sucursales', 'action' => 'view', $cupone->sucursale->id]) : '' ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Categoria') ?></th>
-            <td><?= $cupone->has('categoria') ? $this->Html->link($cupone->categoria->id, ['controller' => 'Categorias', 'action' => 'view', $cupone->categoria->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>

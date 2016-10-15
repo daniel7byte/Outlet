@@ -2,8 +2,6 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('List Categorias'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Cupones'), ['controller' => 'Cupones', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Cupone'), ['controller' => 'Cupones', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Empresas'), ['controller' => 'Empresas', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Empresa'), ['controller' => 'Empresas', 'action' => 'add']) ?></li>
     </ul>

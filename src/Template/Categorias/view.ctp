@@ -5,8 +5,6 @@
         <li><?= $this->Form->postLink(__('Delete Categoria'), ['action' => 'delete', $categoria->id], ['confirm' => __('Are you sure you want to delete # {0}?', $categoria->id)]) ?> </li>
         <li><?= $this->Html->link(__('List Categorias'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Categoria'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Cupones'), ['controller' => 'Cupones', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Cupone'), ['controller' => 'Cupones', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Empresas'), ['controller' => 'Empresas', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Empresa'), ['controller' => 'Empresas', 'action' => 'add']) ?> </li>
     </ul>
@@ -38,65 +36,6 @@
     <div class="row">
         <h4><?= __('Descripcion') ?></h4>
         <?= $this->Text->autoParagraph(h($categoria->descripcion)); ?>
-    </div>
-    <div class="related">
-        <h4><?= __('Related Cupones') ?></h4>
-        <?php if (!empty($categoria->cupones)): ?>
-        <table cellpadding="0" cellspacing="0">
-            <tr>
-                <th scope="col"><?= __('Id') ?></th>
-                <th scope="col"><?= __('Titulo') ?></th>
-                <th scope="col"><?= __('Banner') ?></th>
-                <th scope="col"><?= __('Descripcion') ?></th>
-                <th scope="col"><?= __('Ciudad') ?></th>
-                <th scope="col"><?= __('Img1') ?></th>
-                <th scope="col"><?= __('Img2') ?></th>
-                <th scope="col"><?= __('Img3') ?></th>
-                <th scope="col"><?= __('Img4') ?></th>
-                <th scope="col"><?= __('Img5') ?></th>
-                <th scope="col"><?= __('Valor') ?></th>
-                <th scope="col"><?= __('Descuento') ?></th>
-                <th scope="col"><?= __('FechaInicio') ?></th>
-                <th scope="col"><?= __('HoraInicio') ?></th>
-                <th scope="col"><?= __('FechaTerminacion') ?></th>
-                <th scope="col"><?= __('HoraTerminacion') ?></th>
-                <th scope="col"><?= __('Created') ?></th>
-                <th scope="col"><?= __('Modified') ?></th>
-                <th scope="col"><?= __('Sucursal Id') ?></th>
-                <th scope="col"><?= __('Categoria Id') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
-            </tr>
-            <?php foreach ($categoria->cupones as $cupones): ?>
-            <tr>
-                <td><?= h($cupones->id) ?></td>
-                <td><?= h($cupones->titulo) ?></td>
-                <td><?= h($cupones->banner) ?></td>
-                <td><?= h($cupones->descripcion) ?></td>
-                <td><?= h($cupones->ciudad) ?></td>
-                <td><?= h($cupones->img1) ?></td>
-                <td><?= h($cupones->img2) ?></td>
-                <td><?= h($cupones->img3) ?></td>
-                <td><?= h($cupones->img4) ?></td>
-                <td><?= h($cupones->img5) ?></td>
-                <td><?= h($cupones->valor) ?></td>
-                <td><?= h($cupones->descuento) ?></td>
-                <td><?= h($cupones->fechaInicio) ?></td>
-                <td><?= h($cupones->horaInicio) ?></td>
-                <td><?= h($cupones->fechaTerminacion) ?></td>
-                <td><?= h($cupones->horaTerminacion) ?></td>
-                <td><?= h($cupones->created) ?></td>
-                <td><?= h($cupones->modified) ?></td>
-                <td><?= h($cupones->sucursal_id) ?></td>
-                <td><?= h($cupones->categoria_id) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Cupones', 'action' => 'view', $cupones->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Cupones', 'action' => 'edit', $cupones->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Cupones', 'action' => 'delete', $cupones->id], ['confirm' => __('Are you sure you want to delete # {0}?', $cupones->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </table>
-        <?php endif; ?>
     </div>
     <div class="related">
         <h4><?= __('Related Empresas') ?></h4>

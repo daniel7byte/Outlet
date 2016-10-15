@@ -10,8 +10,6 @@
         <li><?= $this->Html->link(__('List Cupones'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Sucursales'), ['controller' => 'Sucursales', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Sucursale'), ['controller' => 'Sucursales', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Categorias'), ['controller' => 'Categorias', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Categoria'), ['controller' => 'Categorias', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="cupones form large-9 medium-8 columns content">
@@ -35,7 +33,6 @@
             echo $this->Form->input('fechaTerminacion');
             echo $this->Form->input('horaTerminacion');
             echo $this->Form->input('sucursal_id', ['options' => $sucursales]);
-            echo $this->Form->input('categoria_id', ['options' => $categorias]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

@@ -10,7 +10,6 @@ use Cake\Validation\Validator;
  * Cupones Model
  *
  * @property \Cake\ORM\Association\BelongsTo $Sucursales
- * @property \Cake\ORM\Association\BelongsTo $Categorias
  *
  * @method \App\Model\Entity\Cupone get($primaryKey, $options = [])
  * @method \App\Model\Entity\Cupone newEntity($data = null, array $options = [])
@@ -43,10 +42,6 @@ class CuponesTable extends Table
 
         $this->belongsTo('Sucursales', [
             'foreignKey' => 'sucursal_id',
-            'joinType' => 'INNER'
-        ]);
-        $this->belongsTo('Categorias', [
-            'foreignKey' => 'categoria_id',
             'joinType' => 'INNER'
         ]);
     }
@@ -140,7 +135,6 @@ class CuponesTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->existsIn(['sucursal_id'], 'Sucursales'));
-        $rules->add($rules->existsIn(['categoria_id'], 'Categorias'));
 
         return $rules;
     }

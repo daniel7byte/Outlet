@@ -19,7 +19,7 @@ class CuponesController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Sucursales', 'Categorias']
+            'contain' => ['Sucursales']
         ];
         $cupones = $this->paginate($this->Cupones);
 
@@ -37,7 +37,7 @@ class CuponesController extends AppController
     public function view($id = null)
     {
         $cupone = $this->Cupones->get($id, [
-            'contain' => ['Sucursales', 'Categorias']
+            'contain' => ['Sucursales']
         ]);
 
         $this->set('cupone', $cupone);
@@ -63,8 +63,7 @@ class CuponesController extends AppController
             }
         }
         $sucursales = $this->Cupones->Sucursales->find('list', ['limit' => 200]);
-        $categorias = $this->Cupones->Categorias->find('list', ['limit' => 200]);
-        $this->set(compact('cupone', 'sucursales', 'categorias'));
+        $this->set(compact('cupone', 'sucursales'));
         $this->set('_serialize', ['cupone']);
     }
 
@@ -91,8 +90,7 @@ class CuponesController extends AppController
             }
         }
         $sucursales = $this->Cupones->Sucursales->find('list', ['limit' => 200]);
-        $categorias = $this->Cupones->Categorias->find('list', ['limit' => 200]);
-        $this->set(compact('cupone', 'sucursales', 'categorias'));
+        $this->set(compact('cupone', 'sucursales'));
         $this->set('_serialize', ['cupone']);
     }
 

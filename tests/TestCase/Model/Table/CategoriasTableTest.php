@@ -25,8 +25,13 @@ class CategoriasTableTest extends TestCase
      */
     public $fixtures = [
         'app.categorias',
+        'app.empresas',
+        'app.usuarios',
+        'app.bolsa',
         'app.cupones',
-        'app.empresas'
+        'app.sucursales',
+        'app.ciudades',
+        'app.tokens'
     ];
 
     /**

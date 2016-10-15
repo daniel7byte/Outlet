@@ -4,8 +4,6 @@
         <li><?= $this->Html->link(__('New Cupone'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Sucursales'), ['controller' => 'Sucursales', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Sucursale'), ['controller' => 'Sucursales', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Categorias'), ['controller' => 'Categorias', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Categoria'), ['controller' => 'Categorias', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="cupones index large-9 medium-8 columns content">
@@ -25,7 +23,6 @@
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('sucursal_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('categoria_id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -44,7 +41,6 @@
                 <td><?= h($cupone->created) ?></td>
                 <td><?= h($cupone->modified) ?></td>
                 <td><?= $cupone->has('sucursale') ? $this->Html->link($cupone->sucursale->id, ['controller' => 'Sucursales', 'action' => 'view', $cupone->sucursale->id]) : '' ?></td>
-                <td><?= $cupone->has('categoria') ? $this->Html->link($cupone->categoria->id, ['controller' => 'Categorias', 'action' => 'view', $cupone->categoria->id]) : '' ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $cupone->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $cupone->id]) ?>

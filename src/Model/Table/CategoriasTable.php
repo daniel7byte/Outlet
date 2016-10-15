@@ -9,7 +9,6 @@ use Cake\Validation\Validator;
 /**
  * Categorias Model
  *
- * @property \Cake\ORM\Association\HasMany $Cupones
  * @property \Cake\ORM\Association\HasMany $Empresas
  *
  * @method \App\Model\Entity\Categoria get($primaryKey, $options = [])
@@ -41,9 +40,6 @@ class CategoriasTable extends Table
 
         $this->addBehavior('Timestamp');
 
-        $this->hasMany('Cupones', [
-            'foreignKey' => 'categoria_id'
-        ]);
         $this->hasMany('Empresas', [
             'foreignKey' => 'categoria_id'
         ]);

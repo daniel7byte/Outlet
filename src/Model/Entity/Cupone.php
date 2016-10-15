@@ -25,10 +25,8 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\Time $created
  * @property \Cake\I18n\Time $modified
  * @property int $sucursal_id
- * @property int $categoria_id
  *
  * @property \App\Model\Entity\Sucursale $sucursale
- * @property \App\Model\Entity\Categoria $categoria
  */
 class Cupone extends Entity
 {

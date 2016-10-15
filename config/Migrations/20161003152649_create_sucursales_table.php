@@ -31,7 +31,6 @@ class CreateSucursalesTable extends AbstractMigration
       $table->addColumn('titulo', 'string', array('limit' => 100))
             ->addColumn('direccion', 'string', array('limit' => 100))
             ->addColumn('descripcion', 'text')
-            ->addColumn('ciudad', 'string', array('limit' => 100))
             ->addColumn('lat', 'string')
             ->addColumn('lng', 'string')
             ->addColumn('created', 'datetime')
@@ -40,7 +39,12 @@ class CreateSucursalesTable extends AbstractMigration
 
       $keyEmpresa = $this->table('sucursales');
       $keyEmpresa->addColumn('empresa_id', 'integer', array('signed' => 'disable'))
-                 ->addForeignKey('empresa_id', 'empresas', 'id', array('delete' => 'CASCADE', 'update' => 'NO_ACTION'))
+                 ->addForeignKey('empresa_id', 'empresas', 'id', array('delete' => 'CASCADE', 'update' => 'CASCADE'))
                  ->update();
+
+      $keyCiudad = $this->table('sucursales');
+      $keyCiudad->addColumn('ciudad_id', 'integer', array('signed' => 'disable'))
+                ->addForeignKey('ciudad_id', 'ciudades', 'id', array('delete' => 'CASCADE', 'update' => 'CASCADE'))
+                ->update();
     }
 }

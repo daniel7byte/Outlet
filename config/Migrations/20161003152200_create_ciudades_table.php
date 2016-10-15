@@ -2,7 +2,7 @@
 
 use Phinx\Migration\AbstractMigration;
 
-class CreateUsuariosTable extends AbstractMigration
+class CreateCiudadesTable extends AbstractMigration
 {
     /**
      * Change Method.
@@ -27,19 +27,10 @@ class CreateUsuariosTable extends AbstractMigration
      */
     public function change()
     {
-      $table = $this->table('usuarios');
-      $table->addColumn('nombre', 'string', array('limit' => 100))
-            ->addColumn('apellido', 'string', array('limit' => 100))
-            ->addColumn('telefono', 'string', array('limit' => 100))
-            ->addColumn('direccion', 'string', array('limit' => 100))
-            ->addColumn('correo', 'string', array('limit' => 100))
-            ->addColumn('contrasenia', 'string')
-            ->addColumn('plan', 'enum', array('values' => 'Gratuito, Premium'))
-            ->addColumn('rol', 'enum', array('values' => 'admin, user'))
-            ->addColumn('activo', 'boolean')
+      $table = $this->table('ciudades');
+      $table->addColumn('ciudad', 'string')
             ->addColumn('created', 'datetime')
             ->addColumn('modified', 'datetime')
-            ->addIndex('correo', array('unique' => true))
             ->create();
     }
 }

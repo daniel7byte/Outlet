@@ -27,17 +27,18 @@ class CreateUsuariosTable extends AbstractMigration
     {
         $table = $this->table('usuarios');
         $table->addColumn('nombre', 'string', array('limit' => 100))
-            ->addColumn('apellido', 'string', array('limit' => 100))
-            ->addColumn('telefono', 'string', array('limit' => 100))
-            ->addColumn('direccion', 'string', array('limit' => 100))
-            ->addColumn('correo', 'string', array('limit' => 100))
-            ->addColumn('contrasenia', 'string')
-            ->addColumn('plan', 'enum', array('values' => 'Gratuito, Premium'))
-            ->addColumn('rol', 'enum', array('values' => 'admin, user'))
-            ->addColumn('activo', 'boolean')
-            ->addColumn('created', 'datetime')
-            ->addColumn('modified', 'datetime')
-            ->addIndex('correo', array('unique' => true))
-            ->create();
+              ->addColumn('apellido', 'string', array('limit' => 100))
+              ->addColumn('telefono', 'string', array('limit' => 100))
+              ->addColumn('direccion', 'string', array('limit' => 100))
+              ->addColumn('correo', 'string', array('limit' => 100))
+              ->addColumn('contrasenia', 'string')
+              ->addColumn('sexo', 'enum', array('values' => 'male, female, otros'))
+              ->addColumn('plan', 'enum', array('values' => 'free, premium'))
+              ->addColumn('rol', 'enum', array('values' => 'admin, user'))
+              ->addColumn('activo', 'boolean')
+              ->addColumn('created', 'datetime')
+              ->addColumn('modified', 'datetime')
+              ->addIndex('correo', array('unique' => true))
+              ->create();
     }
 }

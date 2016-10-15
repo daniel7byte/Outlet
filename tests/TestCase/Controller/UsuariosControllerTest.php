@@ -18,10 +18,7 @@ class UsuariosControllerTest extends IntegrationTestCase
     public $fixtures = [
         'app.usuarios',
         'app.bolsa',
-        'app.cupones',
-        'app.sucursales',
         'app.empresas',
-        'app.categorias',
         'app.tokens'
     ];
 

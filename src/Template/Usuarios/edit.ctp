@@ -27,6 +27,7 @@
             echo $this->Form->input('direccion');
             echo $this->Form->input('correo');
             echo $this->Form->input('contrasenia');
+            echo $this->Form->input('sexo');
             echo $this->Form->input('plan');
             echo $this->Form->input('rol');
             echo $this->Form->input('activo');

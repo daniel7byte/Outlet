@@ -22,7 +22,8 @@ class CuponesControllerTest extends IntegrationTestCase
         'app.usuarios',
         'app.bolsa',
         'app.tokens',
-        'app.categorias'
+        'app.categorias',
+        'app.ciudades'
     ];
 
     /**

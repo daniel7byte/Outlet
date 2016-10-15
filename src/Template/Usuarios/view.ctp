@@ -58,6 +58,10 @@
         </tr>
     </table>
     <div class="row">
+        <h4><?= __('Sexo') ?></h4>
+        <?= $this->Text->autoParagraph(h($usuario->sexo)); ?>
+    </div>
+    <div class="row">
         <h4><?= __('Plan') ?></h4>
         <?= $this->Text->autoParagraph(h($usuario->plan)); ?>
     </div>

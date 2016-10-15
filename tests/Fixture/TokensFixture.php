@@ -51,10 +51,10 @@ class TokensFixture extends TestFixture
             'titulo' => 'Lorem ipsum dolor sit amet',
             'codigo' => 'Lorem ipsum dolor sit amet',
             'descripcion' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-            'caducidad' => '2016-10-15 01:48:12',
+            'caducidad' => '2016-10-15 04:39:23',
             'activo' => 1,
-            'created' => '2016-10-15 01:48:12',
-            'modified' => '2016-10-15 01:48:12',
+            'created' => '2016-10-15 04:39:23',
+            'modified' => '2016-10-15 04:39:23',
             'usuario_id' => 1
         ],
     ];

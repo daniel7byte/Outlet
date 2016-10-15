@@ -13,6 +13,7 @@ use Cake\ORM\Entity;
  * @property string $direccion
  * @property string $correo
  * @property string $contrasenia
+ * @property string $sexo
  * @property string $plan
  * @property string $rol
  * @property bool $activo

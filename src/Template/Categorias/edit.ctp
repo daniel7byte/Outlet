@@ -20,6 +20,7 @@
         <legend><?= __('Edit Categoria') ?></legend>
         <?php
             echo $this->Form->input('titulo');
+            echo $this->Form->input('icon');
             echo $this->Form->input('descripcion');
         ?>
     </fieldset>

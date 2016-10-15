@@ -32,6 +32,10 @@
         </tr>
     </table>
     <div class="row">
+        <h4><?= __('Icon') ?></h4>
+        <?= $this->Text->autoParagraph(h($categoria->icon)); ?>
+    </div>
+    <div class="row">
         <h4><?= __('Descripcion') ?></h4>
         <?= $this->Text->autoParagraph(h($categoria->descripcion)); ?>
     </div>

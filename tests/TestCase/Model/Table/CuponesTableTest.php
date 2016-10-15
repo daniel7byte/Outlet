@@ -30,7 +30,8 @@ class CuponesTableTest extends TestCase
         'app.usuarios',
         'app.bolsa',
         'app.tokens',
-        'app.categorias'
+        'app.categorias',
+        'app.ciudades'
     ];
 
     /**

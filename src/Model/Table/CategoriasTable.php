@@ -66,6 +66,10 @@ class CategoriasTable extends Table
             ->notEmpty('titulo');
 
         $validator
+            ->requirePresence('icon', 'create')
+            ->notEmpty('icon');
+
+        $validator
             ->requirePresence('descripcion', 'create')
             ->notEmpty('descripcion');
 

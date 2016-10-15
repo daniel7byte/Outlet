@@ -22,7 +22,8 @@ class BolsaControllerTest extends IntegrationTestCase
         'app.empresas',
         'app.usuarios',
         'app.tokens',
-        'app.categorias'
+        'app.categorias',
+        'app.ciudades'
     ];
 
     /**

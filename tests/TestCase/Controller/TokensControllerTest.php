@@ -19,10 +19,11 @@ class TokensControllerTest extends IntegrationTestCase
         'app.tokens',
         'app.usuarios',
         'app.bolsa',
+        'app.empresas',
+        'app.categorias',
         'app.cupones',
         'app.sucursales',
-        'app.empresas',
-        'app.categorias'
+        'app.ciudades'
     ];
 
     /**

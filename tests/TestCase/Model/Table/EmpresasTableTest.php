@@ -27,10 +27,10 @@ class EmpresasTableTest extends TestCase
         'app.empresas',
         'app.usuarios',
         'app.bolsa',
-        'app.cupones',
-        'app.sucursales',
+        'app.tokens',
         'app.categorias',
-        'app.tokens'
+        'app.cupones',
+        'app.sucursales'
     ];
 
     /**

@@ -40,8 +40,8 @@ class CiudadesFixture extends TestFixture
         [
             'id' => 1,
             'ciudad' => 'Lorem ipsum dolor sit amet',
-            'created' => '2016-10-15 03:28:37',
-            'modified' => '2016-10-15 03:28:37'
+            'created' => '2016-10-15 04:37:57',
+            'modified' => '2016-10-15 04:37:57'
         ],
     ];
 }

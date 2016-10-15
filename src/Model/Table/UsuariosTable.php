@@ -91,6 +91,10 @@ class UsuariosTable extends Table
             ->notEmpty('contrasenia');
 
         $validator
+            ->requirePresence('sexo', 'create')
+            ->notEmpty('sexo');
+
+        $validator
             ->requirePresence('plan', 'create')
             ->notEmpty('plan');
 

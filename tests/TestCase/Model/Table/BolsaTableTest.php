@@ -30,7 +30,8 @@ class BolsaTableTest extends TestCase
         'app.empresas',
         'app.usuarios',
         'app.tokens',
-        'app.categorias'
+        'app.categorias',
+        'app.ciudades'
     ];
 
     /**
